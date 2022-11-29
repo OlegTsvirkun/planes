@@ -7,16 +7,25 @@ import { ContentWrapper } from '../ContentWrapper/ContentWrapper';
 import { PlaneItem } from '../PlaneItem/PlaneItem';
 import { Link } from 'react-router-dom';
 import { paths } from '../../paths';
+import { Button } from '../Button/Button';
+import { useSortPlanes } from '../../hooks/useSortPlanes';
 
 export const Planes = ({}) => {
   const dispatch = useDispatch();
   const {planes, isLoading , isError , message} = useSelector((state)=> state.planes);
+  const {
+    isDescSort,
+    setIsDesSort,
+    sortedPlanes
+  } = useSortPlanes(planes || []);
+
   useEffect(() => {
     dispatch(getPlanes())
   }, [dispatch]);
-if (isLoading){
-  return(
-    <div className={styles.isLoading}>
+
+  if (isLoading){
+    return(
+      <div className={styles.isLoading}>
     <Rings
     height="20vh"
     width="20vw"
@@ -31,18 +40,24 @@ if (isLoading){
   )
 }
 
+console.log(planes);
 
   return(
    <>
       <div className={styles.sort}> 
       <ContentWrapper className={styles.planesHeader}>
-        <button> Sorting by price</button>
+        <Button 
+        className={styles.sortBtn} 
+        onClick={
+          ()=>setIsDesSort(!isDescSort)
+        }> 
+        Sorting by {`${!isDescSort ? '↑' : "↓"}`} price </Button>
         <Link className={styles.createPlaneBtn} to = {paths.createPlane}>Add Plane</Link>
       </ContentWrapper>
       </div>
     
       <ContentWrapper className={styles.planes}>
-        {planes && planes.map(plane=> <PlaneItem key ={plane._id} {...plane}/>)}
+        {sortedPlanes && sortedPlanes.map(plane=> <PlaneItem key ={plane._id} {...plane}/>)}
   </ContentWrapper>
     
    </>

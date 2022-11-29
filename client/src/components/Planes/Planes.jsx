@@ -47,7 +47,7 @@ console.log(planes);
       <div className={styles.sort}> 
       <ContentWrapper className={styles.planesHeader}>
         <Button 
-        className={styles.sortBtn} 
+        className={styles.sortBtn}  
         onClick={
           ()=>setIsDesSort(!isDescSort)
         }> 

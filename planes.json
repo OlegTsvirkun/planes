@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "6385ee738f11f57b5a6ca234"
+  },
+  "name": "rtr",
+  "price": 333,
+  "description": "description 1",
+  "capacity": "4",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721715113.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385ee898f11f57b5a6ca236"
+  },
+  "name": "rtr",
+  "price": 3332,
+  "description": "description 2",
+  "capacity": "4",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721737743.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385ee9b8f11f57b5a6ca238"
+  },
+  "name": "rtr",
+  "price": 3332,
+  "description": "description 3",
+  "capacity": "4",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721755840.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385eeb18f11f57b5a6ca23a"
+  },
+  "name": "rtrww",
+  "price": 3356,
+  "description": "description 4",
+  "capacity": "4",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721777414.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385eec88f11f57b5a6ca23c"
+  },
+  "name": "qwert",
+  "price": 2444,
+  "description": "description 5",
+  "capacity": "1",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721800548.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385eedd8f11f57b5a6ca23e"
+  },
+  "name": "rtyru",
+  "price": 2566,
+  "description": "description 6",
+  "capacity": "2",
+  "planeImage": "http://localhost:8000/static/planeImage-1669721821369.jpg",
+  "__v": 0
+}]
